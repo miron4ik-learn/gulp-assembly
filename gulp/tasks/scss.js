@@ -20,7 +20,7 @@ const processors = [
   postcssShort(),
 ]
 
-export default () => {
+export default function scss() {
   return $.gulp.src($.path.src.scss)
     // Error message output
     .pipe(

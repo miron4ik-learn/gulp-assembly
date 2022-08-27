@@ -1,5 +1,5 @@
 import { deleteAsync } from 'del'
 
-export default () => {
+export default function clean() {
   return deleteAsync($.path.clean)
 }

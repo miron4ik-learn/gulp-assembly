@@ -1,4 +1,4 @@
-export default () => {
+export default function staticFiles() {
   return $.gulp.src($.path.src.static)
     // Track only new files
     .pipe($.plugins.newer($.path.build.static))

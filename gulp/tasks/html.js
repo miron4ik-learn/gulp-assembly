@@ -4,7 +4,7 @@ import fileInclude from 'gulp-file-include'
 import htmlBeautify from 'gulp-html-beautify'
 import versionNumber from 'gulp-version-number'
 
-export default () => {
+export default function html() {
   return $.gulp.src($.path.src.html)
     // Error message output
     .pipe(
