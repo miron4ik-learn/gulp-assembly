@@ -7,14 +7,11 @@ const isBuild =  process.argv.includes('--build'),
       isDev   = !process.argv.includes('--build')
 
 global.$ = {
+  // Development environment
   isBuild,
   isDev,
 
-  gulp,
-  path,
-  plugins,
-
-  /* Fix */
+  // Plugin browser-sync Options
   browserSync: {
     server: {
       baseDir: path.buildFolder,
@@ -23,9 +20,9 @@ global.$ = {
     port: 3000,
   },
 
-  htmlBeautify: {
-    indent_size: 2,
-  },
+  gulp,
+  path,
+  plugins,
 }
 
 import tasks from './gulp/tasks.js'

@@ -42,7 +42,9 @@ export default () => {
     .pipe(
       $.plugins.if(
         $.isBuild,
-        htmlBeautify($.htmlBeautify)
+        htmlBeautify({
+          indent_size: 2,
+        })
       )
     )
     // Move files to the dist directory
