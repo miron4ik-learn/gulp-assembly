@@ -13,11 +13,19 @@ global.$ = {
   gulp,
   path,
   plugins,
+
+  browserSync: {
+    server: {
+      baseDir: path.buildFolder,
+    },
+    notify: false,
+    port: 3000,
+  },
 }
 
 import tasks from './gulp/tasks.js'
 
-const { clean } = tasks
+const { clean, server } = tasks
 
 const watcher = () => {
   //
@@ -26,7 +34,7 @@ const watcher = () => {
 // const mainTasks = gulp.series()
 
 const build = gulp.series(clean),
-      dev   = gulp.series(clean)
+      dev   = gulp.series(clean, gulp.parallel(server))
 
 export {
   dev,
