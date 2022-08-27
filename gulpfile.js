@@ -26,15 +26,16 @@ global.$ = {
 import tasks from './gulp/tasks.js'
 
 const { clean, server } = tasks
+const { staticFiles } = tasks
 
 const watcher = () => {
-  //
+  gulp.watch(path.watch.static, staticFiles)
 }
 
-// const mainTasks = gulp.series()
+const mainTasks = gulp.series(staticFiles)
 
-const build = gulp.series(clean),
-      dev   = gulp.series(clean, gulp.parallel(server))
+const build = gulp.series(clean, mainTasks),
+      dev   = gulp.series(clean, mainTasks, gulp.parallel(watcher, server))
 
 export {
   dev,

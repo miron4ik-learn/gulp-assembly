@@ -5,9 +5,15 @@ const srcFolder   = './src',
       buildFolder = './dist'
 
 export default {
-  build: {},
-  src: {},
-  watch: {},
+  build: {
+    static: `${buildFolder}/`,
+  },
+  src: {
+    static: `${srcFolder}/static/*.*`,
+  },
+  watch: {
+    static: `${srcFolder}/static/*.*`,
+  },
 
   clean: buildFolder,
   buildFolder,
