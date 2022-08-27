@@ -8,14 +8,17 @@ export default {
   build: {
     static: `${buildFolder}/`,
     html: `${buildFolder}/`,
+    css: `${buildFolder}/css/`,
   },
   src: {
     static: `${srcFolder}/static/*.*`,
     html: `${srcFolder}/html/*.html`,
+    scss: `${srcFolder}/scss/style.scss`,
   },
   watch: {
     static: `${srcFolder}/static/*.*`,
     html: `${srcFolder}/html/**/*.html`,
+    scss: `${srcFolder}/scss/**/*.scss`,
   },
 
   clean: buildFolder,
