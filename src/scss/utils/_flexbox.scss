@@ -1,0 +1,260 @@
+// Display
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-inline {
+  display: inline-flex;
+}
+
+
+
+// Direction
+
+@mixin flex-direciton-row {
+  flex-direction: row;
+}
+
+@mixin flex-direciton-row-reverse {
+  flex-direction: row-reverse;
+}
+
+@mixin flex-direciton-column {
+  flex-direction: column;
+}
+
+@mixin flex-direciton-column-reverse {
+  flex-direction: column-reverse;
+}
+
+
+
+// Wrap
+
+@mixin flex-wrap {
+  flex-wrap: wrap;
+}
+
+@mixin flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+@mixin flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+
+
+// Order
+
+@mixin order ($o: 0) {
+  order: $o;
+}
+
+
+
+// Flow
+
+@mixin flex-flow ($d, $w) {
+  flex-flow: $d $w;
+}
+
+
+
+// Grow
+
+@mixin flex-grow ($g: 0) {
+  flex-grow: $g;
+}
+
+
+
+// Shrink
+
+@mixin flex-shrink ($s: 1) {
+  flex-shrink: $s;
+}
+
+
+
+// Basis
+
+@mixin flex-basis ($b: auto) {
+  flex-basis: $b;
+}
+
+
+
+// Flex
+
+@mixin flex ($g: 0, $s: 1, $b: auto) {
+  flex: $g $s $b;
+}
+
+
+
+// Justify content
+
+@mixin justify-start {
+  justify-content: flex-start;
+}
+
+@mixin justify-end {
+  justify-content: flex-end;
+}
+
+@mixin justify-center {
+  justify-content: center;
+}
+
+@mixin justify-between {
+  justify-content: space-between;
+}
+
+@mixin justify-around {
+  justify-content: space-around;
+}
+
+
+
+// Align items
+
+@mixin items-start {
+  align-items: flex-start;
+}
+
+@mixin items-end {
+  align-items: flex-end;
+}
+
+@mixin items-center {
+  align-items: center;
+}
+
+@mixin items-baseline {
+  align-items: baseline;
+}
+
+@mixin items-stretch {
+  align-items: stretch;
+}
+
+
+
+// Align self
+
+@mixin self-auto {
+  align-self: auto;
+}
+
+@mixin self-start {
+  align-self: flex-start;
+}
+
+@mixin self-end {
+  align-self: flex-end;
+}
+
+@mixin self-center {
+  align-self: center;
+}
+
+@mixin self-baseline {
+  align-self: baseline;
+}
+
+@mixin self-stretch {
+  align-self: stretch;
+}
+
+
+
+// Align content
+
+@mixin content-start {
+  align-content: flex-start;
+}
+
+@mixin content-end {
+  align-content: flex-end;
+}
+
+@mixin content-center {
+  align-content: center;
+}
+
+@mixin content-between {
+  align-content: space-between;
+}
+
+@mixin content-around {
+  align-content: space-around;
+}
+
+@mixin content-stretch {
+  align-content: stretch;
+}
+
+
+
+// Gap
+
+@mixin gap ($r: normal, $c: normal) {
+  gap: $r $c;
+}
+
+@mixin column-gap ($c) {
+  column-gap: $c;
+}
+
+@mixin row-gap ($r) {
+  row-gap: $r;
+}
+
+
+
+// Flexbox Toolkit
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-ver {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-hor {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-align-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
