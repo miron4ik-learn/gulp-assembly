@@ -29,6 +29,7 @@ import tasks from './gulp/tasks.js'
 
 const { clean, server } = tasks
 const { staticFiles, html, scss } = tasks
+const { ttf2woff, fontsStyle } = tasks
 
 const watcher = () => {
   gulp.watch(path.watch.static, staticFiles)
@@ -36,7 +37,8 @@ const watcher = () => {
   gulp.watch(path.watch.scss, scss)
 }
 
-const mainTasks = gulp.series(staticFiles, html, scss)
+const fontsTasks = gulp.series(ttf2woff, fontsStyle),
+      mainTasks  = gulp.series(fontsTasks, gulp.parallel(staticFiles, html, scss))
 
 const build = gulp.series(clean, mainTasks),
       dev   = gulp.series(clean, mainTasks, gulp.parallel(watcher, server))

@@ -9,11 +9,13 @@ export default {
     static: `${buildFolder}/`,
     html: `${buildFolder}/`,
     css: `${buildFolder}/css/`,
+    fonts: `${buildFolder}/fonts/`,
   },
   src: {
     static: `${srcFolder}/static/*.*`,
     html: `${srcFolder}/html/*.html`,
     scss: `${srcFolder}/scss/style.scss`,
+    fonts: `${srcFolder}/fonts/*.ttf`,
   },
   watch: {
     static: `${srcFolder}/static/*.*`,
