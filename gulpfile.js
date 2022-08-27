@@ -17,14 +17,16 @@ global.$ = {
 
 import tasks from './gulp/tasks.js'
 
+const { clean } = tasks
+
 const watcher = () => {
   //
 }
 
-const mainTasks = gulp.series()
+// const mainTasks = gulp.series()
 
-const build = gulp.series(),
-      dev   = gulp.series()
+const build = gulp.series(clean),
+      dev   = gulp.series(clean)
 
 export {
   dev,
