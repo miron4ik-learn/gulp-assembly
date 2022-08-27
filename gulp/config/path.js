@@ -7,12 +7,15 @@ const srcFolder   = './src',
 export default {
   build: {
     static: `${buildFolder}/`,
+    html: `${buildFolder}/`,
   },
   src: {
     static: `${srcFolder}/static/*.*`,
+    html: `${srcFolder}/html/*.html`,
   },
   watch: {
     static: `${srcFolder}/static/*.*`,
+    html: `${srcFolder}/html/**/*.html`,
   },
 
   clean: buildFolder,

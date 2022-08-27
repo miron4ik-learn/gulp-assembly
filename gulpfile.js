@@ -14,6 +14,7 @@ global.$ = {
   path,
   plugins,
 
+  /* Fix */
   browserSync: {
     server: {
       baseDir: path.buildFolder,
@@ -21,18 +22,23 @@ global.$ = {
     notify: false,
     port: 3000,
   },
+
+  htmlBeautify: {
+    indent_size: 2,
+  },
 }
 
 import tasks from './gulp/tasks.js'
 
 const { clean, server } = tasks
-const { staticFiles } = tasks
+const { staticFiles, html } = tasks
 
 const watcher = () => {
   gulp.watch(path.watch.static, staticFiles)
+  gulp.watch(path.watch.html, html)
 }
 
-const mainTasks = gulp.series(staticFiles)
+const mainTasks = gulp.series(staticFiles, html)
 
 const build = gulp.series(clean, mainTasks),
       dev   = gulp.series(clean, mainTasks, gulp.parallel(watcher, server))
