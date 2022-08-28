@@ -28,17 +28,18 @@ global.$ = {
 import tasks from './gulp/tasks.js'
 
 const { clean, server } = tasks
-const { staticFiles, html, scss } = tasks
 const { ttf2woff, fontsStyle } = tasks
+const { staticFiles, html, scss, js } = tasks
 
 const watcher = () => {
   gulp.watch(path.watch.static, staticFiles)
   gulp.watch(path.watch.html, html)
   gulp.watch(path.watch.scss, scss)
+  gulp.watch(path.watch.js, js)
 }
 
 const fontsTasks = gulp.series(ttf2woff, fontsStyle),
-      mainTasks  = gulp.series(fontsTasks, gulp.parallel(staticFiles, html, scss))
+      mainTasks  = gulp.series(fontsTasks, gulp.parallel(staticFiles, html, scss, js))
 
 const build = gulp.series(clean, mainTasks),
       dev   = gulp.series(clean, mainTasks, gulp.parallel(watcher, server))

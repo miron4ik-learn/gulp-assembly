@@ -11,6 +11,9 @@
   "author": "miron4ik",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "babel-loader": "^8.2.5",
     "browser-sync": "^2.27.10",
     "del": "^7.0.0",
     "gulp": "^4.0.2",
@@ -33,6 +36,7 @@
     "gulp-version-number": "^0.2.4",
     "node-sass-tilde-importer": "^1.0.2",
     "postcss-short": "^5.0.0",
-    "sass": "^1.54.5"
+    "sass": "^1.54.5",
+    "webpack-stream": "^7.0.0"
   }
 }

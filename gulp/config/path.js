@@ -10,17 +10,20 @@ export default {
     html: `${buildFolder}/`,
     css: `${buildFolder}/css/`,
     fonts: `${buildFolder}/fonts/`,
+    js: `${buildFolder}/js/`,
   },
   src: {
     static: `${srcFolder}/static/*.*`,
     html: `${srcFolder}/html/*.html`,
     scss: `${srcFolder}/scss/style.scss`,
     fonts: `${srcFolder}/fonts/*.ttf`,
+    js: `${srcFolder}/js/app.js`,
   },
   watch: {
     static: `${srcFolder}/static/*.*`,
     html: `${srcFolder}/html/**/*.html`,
     scss: `${srcFolder}/scss/**/*.scss`,
+    js: `${srcFolder}/js/**/*.js`,
   },
 
   clean: buildFolder,
