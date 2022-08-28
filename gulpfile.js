@@ -37,6 +37,9 @@ const watcher = () => {
   gulp.watch(path.watch.scss, scss)
   gulp.watch(path.watch.js, js)
   gulp.watch(path.watch.images, images)
+
+  gulp.watch(path.watch.data, html)
+  gulp.watch(path.watch.svg, html)
 }
 
 const fontsTasks = gulp.series(ttf2woff, fontsStyle),

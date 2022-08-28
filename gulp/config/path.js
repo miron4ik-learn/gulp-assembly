@@ -27,6 +27,9 @@ export default {
     scss: `${srcFolder}/scss/**/*.scss`,
     js: `${srcFolder}/js/**/*.js`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg}`,
+
+    data: `${srcFolder}/data/**/*.json`,
+    svg: `${srcFolder}/svg/**/*.svg`,
   },
 
   clean: buildFolder,
