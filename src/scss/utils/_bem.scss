@@ -1,8 +1,14 @@
 $element-sep: '__';
 $modifier-sep: '--';
 
-@mixin block ($block, $type: false) {
+@mixin block ($block) {
   .#{$block} {
+    @content;
+  }
+}
+
+@mixin b ($b) {
+  @include block ($b) {
     @content;
   }
 }
@@ -13,14 +19,32 @@ $modifier-sep: '--';
   }
 }
 
+@mixin e ($e) {
+  @include element ($e) {
+    @content;
+  }
+}
+
 @mixin modifier ($modifier) {
   &#{$modifier-sep}#{$modifier} {
     @content;
   }
 }
 
+@mixin m ($m) {
+  @include modifier ($m) {
+    @content;
+  }
+}
+
 @mixin modifier-element ($modifier, $element) {
   &#{$modifier-sep}#{$modifier} &#{$element-sep}#{$element} {
+    @content;
+  }
+}
+
+@mixin me ($m, $e) {
+  @include modifier-element ($m, $e) {
     @content;
   }
 }
