@@ -4,6 +4,10 @@
   "description": "",
   "main": "gulpfile.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miron4ik-learn/gulp-assembly.git"
+  },
   "scripts": {
     "dev": "gulp",
     "build": "gulp build --build"
