@@ -1,48 +1,56 @@
 $element-sep: '__';
 $modifier-sep: '--';
 
+// Block .block
 @mixin block ($block) {
   .#{$block} {
     @content;
   }
 }
 
+// Alias for block
 @mixin b ($b) {
   @include block ($b) {
     @content;
   }
 }
 
+// Element .block__element
 @mixin element ($element) {
   &#{$element-sep}#{$element} {
     @content;
   }
 }
 
+// Alias for element
 @mixin e ($e) {
   @include element ($e) {
     @content;
   }
 }
 
+// Modifier .block__element--modifier
 @mixin modifier ($modifier) {
   &#{$modifier-sep}#{$modifier} {
     @content;
   }
 }
 
+// Alias for modifier
 @mixin m ($m) {
   @include modifier ($m) {
     @content;
   }
 }
 
+// .block--modifier .block__element
 @mixin modifier-element ($modifier, $element) {
   &#{$modifier-sep}#{$modifier} &#{$element-sep}#{$element} {
     @content;
   }
 }
 
+// Alias for modifier-element
 @mixin me ($m, $e) {
   @include modifier-element ($m, $e) {
     @content;

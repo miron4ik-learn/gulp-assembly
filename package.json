@@ -10,7 +10,8 @@
   },
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build --build"
+    "build": "gulp build --build",
+    "deploy": "gulp ghpages"
   },
   "author": "miron4ik",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "babel-loader": "^8.2.5",
     "browser-sync": "^2.27.10",
     "del": "^7.0.0",
+    "gh-pages": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",

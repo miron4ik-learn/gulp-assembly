@@ -12,19 +12,19 @@
 
 // Direction
 
-@mixin flex-direciton-row {
+@mixin direciton-row {
   flex-direction: row;
 }
 
-@mixin flex-direciton-row-reverse {
+@mixin direciton-row-reverse {
   flex-direction: row-reverse;
 }
 
-@mixin flex-direciton-column {
+@mixin direciton-column {
   flex-direction: column;
 }
 
-@mixin flex-direciton-column-reverse {
+@mixin direciton-column-reverse {
   flex-direction: column-reverse;
 }
 
@@ -82,14 +82,6 @@
 
 @mixin flex-basis ($b: auto) {
   flex-basis: $b;
-}
-
-
-
-// Flex
-
-@mixin flex ($g: 0, $s: 1, $b: auto) {
-  flex: $g $s $b;
 }
 
 

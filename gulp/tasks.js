@@ -10,16 +10,20 @@ import images from './tasks/images.js'
 import { ttf2woff } from './tasks/fonts.js'
 import { fontsStyle } from './tasks/fonts.js'
 
+import deploy from './tasks/deploy.js'
+
 export default {
   clean,
   server,
-
-  ttf2woff,
-  fontsStyle,
 
   staticFiles,
   html,
   scss,
   js,
   images,
+
+  ttf2woff,
+  fontsStyle,
+
+  deploy
 }

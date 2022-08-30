@@ -5,9 +5,10 @@
 @import './utils/functions';
 
 // Utils mixins
-@import './utils/bem';
-@import './utils/mixins';
-@import './utils/flexbox';
+@import './utils/mixins/bem';
+@import './utils/mixins/media';
+@import './utils/mixins/mixins';
+@import './utils/mixins/flexbox';
 
 // Fonts
 @import './fonts';

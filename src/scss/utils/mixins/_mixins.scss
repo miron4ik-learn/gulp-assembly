@@ -58,13 +58,13 @@
   transform: translate(-50%, -50%);
 }
 
-@mixin transform-ver {
+@mixin transform-center-ver {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
-@mixin transform-hor {
+@mixin transform-center-hor {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -83,11 +83,14 @@
 
 // Create a simple circle figure
 
-@mixin circle ($size, $color) {
+@mixin circle ($size, $color: false) {
   width: $size;
   height: $size;
   border-radius: 50%;
-  background-color: $color;
+  
+  @if $color {
+    background-color: $color;
+  }
 }
 
 
