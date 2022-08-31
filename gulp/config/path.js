@@ -12,6 +12,7 @@ export default {
     fonts: `${buildFolder}/fonts/`,
     js: `${buildFolder}/js/`,
     images: `${buildFolder}/img/`,
+    files: `${buildFolder}/files/`,
   },
   src: {
     static: `${srcFolder}/static/*.*`,
@@ -21,6 +22,7 @@ export default {
     fonts: `${srcFolder}/fonts/*.ttf`,
     js: `${srcFolder}/js/app.js`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg}`,
+    files: `${srcFolder}/files/**/*.*`,
   },
   watch: {
     static: `${srcFolder}/static/*.*`,
@@ -29,6 +31,7 @@ export default {
     css_libs: `${srcFolder}/scss/libs/**/*.scss`,
     js: `${srcFolder}/js/**/*.js`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg}`,
+    files: `${srcFolder}/files/**/*.*`,
 
     data: `${srcFolder}/data/**/*.json`,
     svg: `${srcFolder}/svg/**/*.svg`,

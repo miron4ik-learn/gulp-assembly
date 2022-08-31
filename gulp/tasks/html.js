@@ -5,6 +5,8 @@ import htmlBeautify from 'gulp-html-beautify'
 import versionNumber from 'gulp-version-number'
 
 export default function html() {
+  const replace_regexp = new RegExp(Object.keys($.replace_alias).join('|'), 'g')
+
   return $.gulp.src($.path.src.html)
     // Error message output
     .pipe(
@@ -23,7 +25,7 @@ export default function html() {
       })
     )
     // Replace the alias in relative paths
-    .pipe($.plugins.replace(/@img\//g, 'img/'))
+    .pipe($.plugins.replace(replace_regexp, match => $.replace_alias[match]))
     // Add version number to js/css in HTML
     .pipe(
       $.plugins.if(

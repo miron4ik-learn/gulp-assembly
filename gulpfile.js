@@ -20,10 +20,16 @@ global.$ = {
     port: 3000,
   },
 
-  // gh-pages
+  // Plugin gh-pages Option
   ghpages: {
     branch: 'gh-pages',
     repo: 'https://github.com/miron4ik-learn/shady-rhymes.git',
+  },
+
+  // Plugin gulp-replace alias
+  replace_alias: {
+    '@img\/': 'img/',
+    '@files\/': 'files/',
   },
 
   gulp,
@@ -35,7 +41,7 @@ import tasks from './gulp/tasks.js'
 
 const { clean, server } = tasks
 const { ttf2woff, fontsStyle } = tasks
-const { staticFiles, html, scss, js, images } = tasks
+const { staticFiles, html, scss, js, images, files } = tasks
 const { deploy } = tasks
 
 const watcher = () => {
@@ -44,13 +50,14 @@ const watcher = () => {
   gulp.watch(path.watch.scss, scss)
   gulp.watch(path.watch.js, js)
   gulp.watch(path.watch.images, images)
+  gulp.watch(path.watch.files, files)
 
   gulp.watch(path.watch.data, html)
   gulp.watch(path.watch.svg, html)
 }
 
 const fontsTasks = gulp.series(ttf2woff, fontsStyle),
-      mainTasks  = gulp.series(fontsTasks, gulp.parallel(staticFiles, html, scss, js, images))
+      mainTasks  = gulp.series(fontsTasks, gulp.parallel(staticFiles, html, scss, js, images, files))
 
 const build   = gulp.series(clean, mainTasks),
       dev     = gulp.series(clean, mainTasks, gulp.parallel(watcher, server)),

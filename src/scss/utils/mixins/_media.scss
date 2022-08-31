@@ -63,6 +63,7 @@
     $to: $to,
     $and: $and,
     $media-type: $media-type,
+    $media-feature: width,
     $bp: $bp
   ) {
     @content;
@@ -79,6 +80,7 @@
     $from: $from,
     $and: $and,
     $media-type: $media-type,
+    $media-feature: width,
     $bp: $bp
   ) {
     @content;

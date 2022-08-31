@@ -21,6 +21,8 @@ const processors = [
 ]
 
 export default function scss() {
+  const replace_regexp = new RegExp(Object.keys($.replace_alias).join('|'), 'g')
+
   return $.gulp.src([ $.path.src.scss, $.path.src.css_libs ])
     // Error message output
     .pipe(
@@ -43,7 +45,7 @@ export default function scss() {
       postcss(processors)
     )
     // Replace the alias in relative paths
-    .pipe($.plugins.replace(/@img\//g, '../img/'))
+    .pipe($.plugins.replace(replace_regexp, match => `../${$.replace_alias[match]}`))
     // Group CSS media queries
     .pipe(
       $.plugins.if(

@@ -29,3 +29,11 @@ html {
 
 // Reusuable CSS
 @import './reusuable';
+
+.img {
+  background: url('@img/img-1.png');
+}
+
+.file {
+  background: url('@files/file-1.txt');
+}

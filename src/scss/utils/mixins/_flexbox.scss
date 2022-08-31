@@ -12,19 +12,19 @@
 
 // Direction
 
-@mixin direciton-row {
+@mixin direction-row {
   flex-direction: row;
 }
 
-@mixin direciton-row-reverse {
+@mixin direction-row-reverse {
   flex-direction: row-reverse;
 }
 
-@mixin direciton-column {
+@mixin direction-column {
   flex-direction: column;
 }
 
-@mixin direciton-column-reverse {
+@mixin direction-column-reverse {
   flex-direction: column-reverse;
 }
 
@@ -192,7 +192,7 @@
 
 // Gap
 
-@mixin gap ($r: normal, $c: normal) {
+@mixin gap ($r: normal, $c: $r) {
   gap: $r $c;
 }
 

@@ -246,3 +246,24 @@
   ::-moz-selection { @content; }
   ::selection { @content; }
 }
+
+
+
+// Scale img
+
+@mixin scale-img (
+  $hidden: $img-hidden,
+  $transition: $img-transition,
+  $scale: $img-scale
+) {
+  overflow: $img-hidden;
+  line-height: 0;
+
+  img {
+    transition: $img-transition;
+
+    &:hover {
+      transform: $img-scale;
+    }
+  }
+}

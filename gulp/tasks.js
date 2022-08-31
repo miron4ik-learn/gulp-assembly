@@ -6,6 +6,7 @@ import html from './tasks/html.js'
 import scss from './tasks/scss.js'
 import js from './tasks/js.js'
 import images from './tasks/images.js'
+import files from './tasks/files.js'
 
 import { ttf2woff } from './tasks/fonts.js'
 import { fontsStyle } from './tasks/fonts.js'
@@ -21,6 +22,7 @@ export default {
   scss,
   js,
   images,
+  files,
 
   ttf2woff,
   fontsStyle,
