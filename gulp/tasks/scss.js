@@ -21,7 +21,7 @@ const processors = [
 ]
 
 export default function scss() {
-  return $.gulp.src($.path.src.scss)
+  return $.gulp.src([ $.path.src.scss, $.path.src.css_libs ])
     // Error message output
     .pipe(
       $.plugins.plumber(

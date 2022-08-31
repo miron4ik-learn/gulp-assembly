@@ -17,6 +17,7 @@ export default {
     static: `${srcFolder}/static/*.*`,
     html: `${srcFolder}/html/*.html`,
     scss: `${srcFolder}/scss/style.scss`,
+    css_libs: `${srcFolder}/scss/libs/libs.scss`,
     fonts: `${srcFolder}/fonts/*.ttf`,
     js: `${srcFolder}/js/app.js`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg}`,
@@ -25,6 +26,7 @@ export default {
     static: `${srcFolder}/static/*.*`,
     html: `${srcFolder}/html/**/*.html`,
     scss: `${srcFolder}/scss/**/*.scss`,
+    css_libs: `${srcFolder}/scss/libs/**/*.scss`,
     js: `${srcFolder}/js/**/*.js`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg}`,
 
